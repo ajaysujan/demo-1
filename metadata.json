@@ -1,0 +1,6 @@
+{
+  "name": "AURA AI - School AI Learning System",
+  "description": "Personal female AI learning companion for Class 12 MP Board and beyond, featuring ChatGPT-style explanations, Gemini animations, fast female voice text-to-speech, and AI image generation.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
