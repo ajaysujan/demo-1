@@ -14,6 +14,10 @@ const API_KEYS = [
   process.env.GEMINI_API_KEY_3,
   process.env.GEMINI_API_KEY_4,
   process.env.GEMINI_API_KEY,
+  process.env.Gemini_API_Key_1,
+  process.env.Gemini_API_Key_2,
+  process.env.Gemini_API_Key_3,
+  process.env.Gemini_API_Key_4,
 ].filter((key): key is string => Boolean(key?.trim()));
 
 export const GEMINI_API_KEY = API_KEYS[0] || '';

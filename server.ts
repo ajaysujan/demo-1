@@ -3,7 +3,6 @@ import path from 'path';
 import { fileURLToPath } from 'url';
 import dotenv from 'dotenv';
 import {
-  ai,
   GEMINI_API_KEY,
   GEMINI_API_KEY_COUNT,
   streamGeminiChat,
@@ -82,6 +81,15 @@ app.get('/api/status', (req: Request, res: Response) => {
     keyCount: GEMINI_API_KEY_COUNT,
     model: 'gemini-3.8-flash',
     name: 'AURA',
+  });
+});
+
+// Debug-safe Gemini configuration check (never returns API key values)
+app.get('/api/gemini-status', (req: Request, res: Response) => {
+  res.json({
+    configured: GEMINI_API_KEY_COUNT > 0,
+    keyCount: GEMINI_API_KEY_COUNT,
+    model: 'gemini-3.8-flash'
   });
 });
 
